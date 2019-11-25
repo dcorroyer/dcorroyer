@@ -1,0 +1,122 @@
+<!--
+
+@AUTHOR : Dylan CORROYER / dylan.corroyer@wanadoo.fr
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dylan Corroyer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+	<script type="text/javascript">
+		
+		$(window).on('load', function() {
+            $('.preloader').addClass('complete');
+            $('.bouton').addClass('complete');
+		})
+
+	</script>
+
+</head>
+
+<body>
+
+<div class="head">
+
+    <div class="preloader"></div>
+
+<!-- Accueil -->
+
+    <div class="container text-left">
+
+        <h1>Projects</h1>
+
+        <section class="title-wrapper">
+
+            Here are my freelance, associative and personal projects
+            <br>
+            If you have any question, don't hesitate to contact me.
+
+        </section>
+
+        <div class="container text-left">
+
+            <a href="index.html"><button type="button" class="bouton" id="bouton">Home</button></a>
+            <a data-scroll="projects" href="#"><button type="button" class="bouton" id="bouton1">My projects</button></a>
+            <a href="about.html"><button type="button" class="bouton" id="bouton2">About me</button></a>
+            
+        </div>
+
+    </div>
+
+</div>
+
+<div class="projects" id="projects">
+
+<!-- Projects -->
+
+    <div class="container mt-5 mb-5">
+
+        <h4 class="text-center mt-2 mb-4">My projects</h4>
+
+        <section class="row mt-5 justify-content-center">
+                
+            <div class="col-xs-12 col-sm-6 mt-5">
+                <div class="text-center">
+                    <h4 class="mb-4 mt-4">
+                        <a href="">Symfony 4 Portfolio</a>
+                    </h4>
+                    <a href="https://github.com/dcorroyer/portfolio-symfony4-backend">
+                        <img src="images/symfony.png" class="imgprw"/>
+                    </a>
+                    <p class="mb-0 text-muted text-left mt-4">2019</p>
+                    <p class="content text-left">
+                        Symfony 4 application to customers to be autonomous to add, edit, delete projects.<br>
+                        Programming languages: PHP7 (Symfony 4), HTML / CSS / Bootstrap 4.
+                    </p>
+                    <p class="content text-left">Available on my <a href="https://github.com/dcorroyer/portfolio-symfony4-backend">Github</a></p>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="row justify-content-center">
+                
+            <div class="col-xs-12 col-sm-6 mt-5">
+                <div class="text-center">
+                    <h4 class="mb-4 mt-4">
+                        <a href="https://acidarts.fr" target="_blank">www.acidarts.fr</a>
+                    </h4>
+                    <a href="https://acidarts.fr" target="_blank">
+                        <img src="images/acidarts/acidarts.jpg" class="imgprw"/>
+                    </a>
+                    <p class="mb-0 text-muted text-left mt-4">2018</p>
+                    <p class="content text-left">
+                        Portfolio developed for a freelance 3D artist. (My first)<br>
+                        Programming languages: HTML / CSS / Javascript / PHP.
+                    </p>
+                    <p class="content text-left">Available <a href="http://acidarts.fr">Here</a></p>
+                </div>
+            </div>
+
+        </section>
+     
+    </div>
+
+</div>
+
+<footer id="footer">
+    <p class="m-0 text-dark">Copyright &copy; 2019 - Dylan Corroyer</p>
+</footer>
+
+<script src="assets/index.js"></script>
+
+</body>
+</html>

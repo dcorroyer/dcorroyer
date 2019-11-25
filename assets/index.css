@@ -1,0 +1,317 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+	padding: 0;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.75;
+  transition: 0.75s;
+}
+
+.preloader.complete {
+  opacity: 0;
+}
+
+.head {
+  height: 100%;
+  width: 100%;
+  background: url(../images/bg-min.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  height: 100%;
+  position: relative;
+  display: flex;
+  background-color: #F8F8F8;
+  align-items: center;
+}
+
+.projects, .about {
+  position: relative;
+  display: flex;
+  background-color: #F8F8F8;
+}
+
+.contact > div, .head > div, .projects > div, .about > div {
+  margin: auto;
+}
+
+.container {
+  margin-top: 10%;
+}
+
+#bouton, #bouton1, #bouton2, #bouton3, #bouton4, #bouton5 {
+  outline: none;
+}
+
+.bouton {
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.33);
+  padding: 0.5rem 1rem;
+  border: 0;
+  opacity: 0;
+  transform: scale(1);
+}
+
+.bouton.complete {
+  opacity: 1;
+}
+
+.bouton:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+a > .bouton {
+  color: white;
+  text-decoration: none;
+}
+
+#footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer > p {
+  font-size: 14px;
+}
+
+
+
+/* Index */
+.github {
+  width: 75px;
+}
+
+.mail {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.mail:hover {
+  color: black;
+}
+
+/* Others */
+h1 {
+  color: white;
+}
+
+h4 > a {
+  color: black;
+}
+
+h4 > a:hover {
+  color: black;
+}
+
+h4:hover, a:hover {
+  text-decoration: none;
+}
+
+.imgprw {
+  height: 150px;
+}
+
+.col-xs-12.col-sm-6.mt-5 {
+  background-color: white;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 420px) {
+  .bouton {
+    display: block;
+    margin-top: 0.5em;
+  }
+
+  .mail {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .col-xs-12.col-sm-6.mt-5 {
+    margin: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Animation Title */
+.title-wrapper {
+  position: relative;
+  margin: 20px auto;  
+  color: white;
+}
+
+.title-words {
+  display: inline;
+  text-indent: 5px;
+  color: white;
+}
+
+.title-words-1 span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: rotateWord 15s linear infinite 0s;
+  -ms-animation: rotateWord 15s linear infinite 0s;
+  animation: rotateWord 15s linear infinite 0s;
+}
+
+.title-words-1 span:nth-child(2) {
+  -webkit-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.title-words-1 span:nth-child(3) {
+  -webkit-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.title-words-1 span:nth-child(4) {
+  -webkit-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+.title-words-1 span:nth-child(5) {
+  -webkit-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+@keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Timeline */
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 50px 0;
+  padding-left: 50px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid grey;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+ul.timeline > li > a {
+  color: black;
+  font-weight: bold;
+}
+
+ul.timeline > li > p > a {
+  color: black;
+}
+
+.title {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0;
+}
