@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+	padding: 0;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.75;
+  transition: 0.75s;
+}
+
+.preloader.complete {
+  opacity: 0;
+}
+
+.head {
+  height: 100%;
+  width: 100%;
+  background: url(../images/bg-min.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  height: 100%;
+  position: relative;
+  display: flex;
+  background-color: #F8F8F8;
+  align-items: center;
+}
+
+.contact > div, .head > div {
+  margin: auto;
+}
+
+.container {
+  margin-top: 10%;
+}
+
+.bouton {
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.33);
+  padding: 0.5rem 1rem;
+  border: 0;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.15s ease-in;
+}
+
+.bouton.complete {
+  opacity: 1;
+}
+
+.bouton:hover {
+  background: rgba(0, 0, 0, 1);
+  transition: all 0.2s ease-in;
+}
+
+a > .bouton {
+  color: white;
+  text-decoration: none;
+}
+
+#footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer > p {
+  font-size: 14px;
+}
+
+
+/* Index */
+.github {
+  width: 75px;
+  transition: all 0.15s ease-in;
+}
+
+.github:hover {
+  transform: scale(1.1);
+  transition: all 0.20s ease-in;
+}
+
+.mail {
+  color: black;
+  font-size: 1.5rem;
+  padding: 0;
+  position: relative;
+}
+
+.mail:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.mail:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -2px;
+	background: #000;
+	transition: all 0.3s ease-in;
+}
+
+.mail:after {
+	width: 0%;
+	height: 2px;
+}
+
+.mail:hover:before {height: 100%;}
+.mail:hover:after {width: 100%;}
+
+
+/* Responsive */
+@media screen and (max-width: 420px) {
+  .bouton {
+    display: block;
+    margin-top: 0.5em;
+  }
+
+  .mail {
+    font-size: 1rem;
+  }
+}
+
+
+/* Animation Title */
+.title-wrapper {
+  position: relative;
+  margin: 20px auto;  
+  color: white;
+}
+
+.title-words {
+  display: inline;
+  text-indent: 5px;
+  color: white;
+}
+
+.title-words-1 span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: rotateWord 15s linear infinite 0s;
+  -ms-animation: rotateWord 15s linear infinite 0s;
+  animation: rotateWord 15s linear infinite 0s;
+}
+
+.title-words-1 span:nth-child(2) {
+  -webkit-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.title-words-1 span:nth-child(3) {
+  -webkit-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.title-words-1 span:nth-child(4) {
+  -webkit-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+.title-words-1 span:nth-child(5) {
+  -webkit-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+@keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
