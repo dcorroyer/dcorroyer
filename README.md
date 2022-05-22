@@ -56,5 +56,5 @@
 
 ---
 
-[website]: https://dcorroyer.fr
+[website]: http://dcorroyer.fr
 [linkedin]: https://www.linkedin.com/in/dcorroyer/
