@@ -1,6 +1,6 @@
-### Hi there, I'm Dylan - [dcorroyer.fr][website] 👋 
+### Hi there, I'm Dylan - [www.dcorroyer.fr][website] 👋 
 
-![Website](https://img.shields.io/website?label=DCORROYER.FR&style=for-the-badge&url=http%3A%2F%2Fdcorroyer.fr)
+![Website](https://img.shields.io/website?label=DCORROYER.FR&style=for-the-badge&url=https%3A%2F%2Fdcorroyer.fr)
 
 ## I'm a Developer and a Learning lover
 
@@ -56,5 +56,5 @@
 
 ---
 
-[website]: http://dcorroyer.fr
+[website]: https://dcorroyer.fr
 [linkedin]: https://www.linkedin.com/in/dcorroyer/
