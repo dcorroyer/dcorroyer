@@ -1,8 +1,6 @@
 ### Hi there, I'm Dylan - [dcorroyer.fr][website] 👋 
 
-<!-- [![Website](https://img.shields.io/website?label=DCORROYER.FR&style=for-the-badge&url=https%3A%2F%2Facidarts.fr)](https://dcorroyer.fr) -->
-
-![Website](https://img.shields.io/website?label=DCORROYER.FR&style=for-the-badge&url=https%3A%2F%2Facidarts.fr)
+![Website](https://img.shields.io/website?label=DCORROYER.FR&style=for-the-badge&url=http%3A%2F%2Fdcorroyer.fr)
 
 ## I'm a Developer and a Learning lover
 
@@ -37,6 +35,7 @@
 <img align="left" alt="TailwindCSS" width="26px" src="images/description/tailwind.png" />
 <img align="left" alt="JavaScript" width="26px" src="images/description/javascript.png" />
 <img align="left" alt="VueJS" width="26px" src="images/description/vue.png" />
+<img align="left" alt="NuxtJS" width="26px" src="images/description/nuxt.png" />
 <img align="left" alt="ReactJS" width="26px" src="images/description/react.png" />
 
 <br />
@@ -57,5 +56,5 @@
 
 ---
 
-[website]: https://dcorroyer.fr
+[website]: http://dcorroyer.fr
 [linkedin]: https://www.linkedin.com/in/dcorroyer/
