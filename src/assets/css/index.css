@@ -102,4 +102,33 @@
         @apply
             opacity-100
     }
+
+    .portfolio-heading {
+        @apply
+            text-4xl md:text-5xl
+            text-center
+            text-primary md:text-left
+            font-bold
+            mb-8 md:mb-12
+    }
+
+    .portfolio-card {
+        @apply
+            flex flex-col md:flex-row
+            items-center
+            bg-white dark:bg-primary-gray
+            rounded overflow-hidden
+    }
+
+    .portfolio-link {
+        @apply
+            flex items-center gap-2
+            px-4 py-2
+            w-max hover:brightness-110
+    }
+
+    .contact-link {
+        @apply
+            p-4 rounded-full hover:brightness-110
+    }
 }
