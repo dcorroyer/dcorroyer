@@ -1,3 +1,7 @@
+<script setup>
+  import FooterSocialCard from './FooterSocialCard.vue';
+</script>
+
 <template>
   <footer class="w-full text-center mt-40 bg-white dark:bg-primary-gray">
     <section id="contact" class="flex flex-col gap-12 justify-center items-center py-20">
@@ -11,29 +15,24 @@
         </p>
       </div>
       <div class="flex flex-wrap justify-content gap-5 md:gap-10">
-        <a href="https://github.com/dcorroyer" class="contact-link">
-          <img
-            class="w-16 md:w-12"
-            src="../assets/images/github-black.svg"
-            alt="github"
-          />
-        </a>
 
-        <a href="https://linkedin.com/in/dcorroyer" class="contact-link">
-          <img
-            class="w-16 md:w-12"
-            src="../assets/images/linkedin.svg"
-            alt="linkedin"
-          />
-        </a>
+        <FooterSocialCard 
+          socialLink="https://github.com/dcorroyer"
+          imageUrl="../src/assets/images/github-black.svg"
+          imageName="github"
+        />
 
-        <a href="https://discord.gg/V5HjYg2dT4" class="contact-link">
-          <img
-            class="w-16 md:w-12"
-            src="../assets/images/discord.svg"
-            alt="discord"
-          />
-        </a>
+        <FooterSocialCard 
+          socialLink="https://linkedin.com/in/dcorroyer"
+          imageUrl="../src/assets/images/linkedin.svg"
+          imageName="linkedin"
+        />
+
+        <FooterSocialCard 
+          socialLink="https://discord.gg/V5HjYg2dT4"
+          imageUrl="../src/assets/images/discord.svg"
+          imageName="discord"
+        />
 
       </div>
     </section>
