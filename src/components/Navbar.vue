@@ -1,8 +1,8 @@
 <template>
-  <nav class="nav">
-    <div class="container flex items-center justify-between h-16 md:h-20">
+  <nav class="nav shadow-md">
+    <div class="container flex items-center justify-between h-12 md:h-16">
       <h1 class="relative z-30 font-semibold text-2xl">
-        <a href="#home">Dylan Corroyer</a>
+        <a href="#home" class="nav-link">Dylan Corroyer</a>
       </h1>
       <div class="flex items-center flex-flow-reverse md:flex-row gap-3 md:gap-12">
 
@@ -17,7 +17,7 @@
         <!-- Toggle theme -->
         <button id="toggle-theme" class="relative z-30 dark:invert">
           <img
-            class="md:opacity-70 w-7 md:-mt-1"
+            class="w-7 md:-mt-1"
             src="../assets/images/icon-dark.svg" 
             alt="theme"
           />

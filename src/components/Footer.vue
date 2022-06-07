@@ -1,40 +1,40 @@
 <template>
   <footer class="w-full text-center mt-40 bg-white dark:bg-primary-gray">
     <section id="contact" class="flex flex-col gap-12 justify-center items-center py-20">
-      <h2 class="text-4xl md:text-5xl font-bold text-primary">
+      <h2 class="text-4xl md:text-5xl font-bold text-primary mb-5">
         Contact
       </h2>
+      <div class="container">
+        <p class="opacity-80 text-center">
+          Do you have any <span class="font-semibold dark:font-bold">Question</span> ?
+          Feel free to contact me through my socials.
+        </p>
+      </div>
       <div class="flex flex-wrap justify-content gap-5 md:gap-10">
-        <a href="#" class="contact-link bg-blue-500">
+        <a href="https://github.com/dcorroyer" class="contact-link">
           <img
-            src="../assets/images/icon-facebook.svg"
-            alt="facebook"
+            class="w-16 md:w-12"
+            src="../assets/images/github-black.svg"
+            alt="github"
           />
         </a>
-        <a href="#" class="contact-link bg-pink-500">
+
+        <a href="https://linkedin.com/in/dcorroyer" class="contact-link">
           <img
-            src="../assets/images/icon-instagram.svg"
-            alt="instagram"
+            class="w-16 md:w-12"
+            src="../assets/images/linkedin.svg"
+            alt="linkedin"
           />
         </a>
-        <a href="#" class="contact-link bg-blue-600">
+
+        <a href="https://discord.gg/V5HjYg2dT4" class="contact-link">
           <img
-            src="../assets/images/icon-telegram.svg"
-            alt="telegram"
+            class="w-16 md:w-12"
+            src="../assets/images/discord.svg"
+            alt="discord"
           />
         </a>
-        <a href="#" class="contact-link bg-blue-400">
-          <img
-            src="../assets/images/icon-twitter.svg"
-            alt="twitter"
-          />
-        </a>
-        <a href="#" class="contact-link bg-green-400">
-          <img
-            src="../assets/images/icon-whatsapp.svg"
-            alt="whatsapp"
-          />
-        </a>
+
       </div>
     </section>
     <h2 class="pb-10">

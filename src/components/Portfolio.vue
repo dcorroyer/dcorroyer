@@ -1,83 +1,20 @@
+<script setup>
+  import PortfolioCard from './PortfolioCard.vue';
+</script>
+
 <template>
   <section id="portfolio" class="pt-32">
     <h2 class="portfolio-heading">
-      My Portfolio
+      Here <span class="text-black dark:text-white font-normal opacity-70">is my work</span>
     </h2>
-    <ul class="w-full md:w-5/6 space-y-10 py-5">
-      <li class="portfolio-card">
-        <div class="w-full md:w-1/3 h-60">
-          <img
-            class="h-full w-full object-cover"
-            src="../assets/images/random-portfolio.jpg"
-            alt="portfolio"
-          />
-        </div>
-        <div class="w-full md:w-2/3 p-5">
-          <h2 class="text-3xl font-bold mb-3">
-            Portfolio 1
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Vero, nostrum culpa doloribus repudiandae, assumenda,
-            inventore nobis ratione dolor repellendus at sed odit possimus cum quidem impedit voluptatibus nulla corrupti exercitationem?
-          </p>
-          <div class="mt-8 font-semibold text-white flex items-center gap-2">
-            <a href="#" class="portfolio-link bg-primary">
-              <img
-                class="w-5 h-5"
-                src="../assets/images/github.svg"
-                alt="github"
-              />
-              Github
-            </a>
-            <a href="#" class="portfolio-link bg-primary-gray dark:bg-primary-black">
-              <img
-                class="w-5 h-5"
-                src="../assets/images/web.svg"
-                alt="website"
-              />
-              Website
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="portfolio-card">
-        <div class="w-full md:w-1/3 h-60">
-          <img
-            class="h-full w-full object-cover"
-            src="../assets/images/random-portfolio.jpg"
-            alt="portfolio"
-          />
-        </div>
-        <div class="w-full md:w-2/3 p-5">
-          <h2 class="text-3xl font-bold mb-3">
-            Portfolio 2
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Vero, nostrum culpa doloribus repudiandae, assumenda,
-            inventore nobis ratione dolor repellendus at sed odit possimus cum quidem impedit voluptatibus nulla corrupti exercitationem?
-          </p>
-          <div class="mt-8 font-semibold text-white flex items-center gap-2">
-            <a href="#" class="portfolio-link bg-primary">
-              <img
-                class="w-5 h-5"
-                src="../assets/images/github.svg"
-                alt="github"
-              />
-              Github
-            </a>
-            <a href="#" class="portfolio-link bg-primary-gray dark:bg-primary-black">
-              <img
-                class="w-5 h-5"
-                src="../assets/images/web.svg"
-                alt="website"
-              />
-              Website
-            </a>
-          </div>
-        </div>
-      </li>
+    <ul class="w-full md:w-5/6 space-y-10 py-5 m-auto">
+      <PortfolioCard 
+        title="Acidarts - Portfolio"
+        description="A portfolio made for a 3D freelance artist who wanted to present his work."
+        githubLink="https://github.com/dcorroyer/acidarts"
+        webLink="https://acidarts.fr"
+        imageUrl="./src/assets/images/acidarts.jpg"
+      />
     </ul>
   </section>
 </template>

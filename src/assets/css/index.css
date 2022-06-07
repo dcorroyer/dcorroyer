@@ -48,6 +48,12 @@
             hover:text-black dark:hover:text-primary
     }
 
+    .about-link {
+        @apply
+            text-primary
+            hover:text-black dark:hover:text-white
+    }
+
     .home-section {
         @apply
             grid items-center
@@ -55,6 +61,8 @@
             pt-28 md:pt-0
             md:h-screen
             md:overflow-hidden
+            mb-8 md:mb-0
+            mt-20 md:mt-0
     }
 
     .btn-primary {
@@ -70,9 +78,11 @@
         @apply
             bg-primary
             rounded-md md:rounded-none
-            h-60 md:h-full
+            h-0 md:h-1/2
+            mt-5 md:mt-0
             overflow-hidden
             order-1 md:order-2
+            invisible md:visible
     }
 
     .skill {
@@ -89,7 +99,7 @@
         @apply
             absolute top-full
             opacity-100 md:opacity-0
-            w-max px-3 py-2 mt-3
+            w-max px-3 py-2 mt-1
             bg-white dark:bg-primary-gray
             rounded md:shadow-md transition
     }

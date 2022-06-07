@@ -21,7 +21,7 @@ module.exports = {
           DEFAULT: '#6D83F2',
           black: '#222831',
           gray: '#393E46',
-          white: '#EEEEEE'
+          white: '#F8F8F8'
         }
       }
     },

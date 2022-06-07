@@ -9,82 +9,31 @@
         />
       </div>
       <div class="w-full md:w-1/2 text-base md:text-lg text-center md:text-left">
-        <h2 class="text-primary font-bold text-2xl md:text-3xl mb-3">
-          Hi, I'm Dylan Corroyer
+        <h2 class="text-primary font-bold text-2xl md:text-3xl mt-5 md:mt-0">
+          Hi, <span class="text-black dark:text-white font-normal opacity-70">I'm Dylan Corroyer</span>
         </h2>
-        <p class="mb-3 opacity-80">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Tempore at aliquam ea magni vitae cum, unde tempora,
-          nulla voluptates asperiores voluptatum provident non aperiam accusantium soluta illo itaque placeat! Facere!
+        <!--<p class="mb-3 mt-5 opacity-80 text-justify">
+          Je suis développeur web depuis 3 ans spécialisé dans la conception et la maintenance d'applications web
+          majoritairement sur la partie <span class="font-semibold dark:font-bold">Back-End</span>.
         </p>
-        <p class="opacity-80">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Illum temporibus quae harum sint enim quam nemo explicabo architecto numquam.
-          Sapiente beatae adipisci eligendi tempora deleniti impedit labore incidunt, laborum esse?
+        <p class="mb-3 opacity-80 text-justify">
+          Je suis passionné par l'environnement gravitant autour du développement web,
+          je travaille également sur la partie <span class="font-semibold dark:font-bold">Front-End</span> ainsi que la partie <span class="font-semibold dark:font-bold">DevOps</span>.
         </p>
-      </div>
-    </div>
-    <div class="mt-32 text-center">
-      <h2 class="text-primary text-3xl md:text-4xl font-bold mb-14">
-        My Skills
-      </h2>
-      <div class="flex flex-wrap items-center justify-center gap-24 md:gap-12">
-        <div class="skill" data-text="Experience 3 years">
-          <img
-            class="w-16"
-            src="../assets/images/php.png"
-            alt="php"
-          />
-        </div>
-        <div class="skill" data-text="Experience 3 years">
-          <img
-            class="w-16"
-            src="../assets/images/symfony.png"
-            alt="symfony"
-          />
-        </div>
-        <div class="skill" data-text="Experience 2 years">
-          <img
-            class="w-16"
-            src="../assets/images/javascript.png"
-            alt="javascript"
-          />
-        </div>
-        <div class="skill" data-text="Some knowledge">
-          <img
-            class="w-16"
-            src="../assets/images/reactjs.png"
-            alt="react"
-          />
-        </div>
-        <div class="skill" data-text="Learning in progress">
-          <img
-            class="w-16"
-            src="../assets/images/vuejs.png"
-            alt="vue"
-          />
-        </div>
-        <div class="skill" data-text="Learning in progress">
-          <img
-            class="w-16"
-            src="../assets/images/nuxt.png"
-            alt="nuxt"
-          />
-        </div>
-        <div class="skill" data-text="Learning in progress">
-          <img
-            class="w-16"
-            src="../assets/images/tailwindcss.png"
-            alt="tailwindcss"
-          />
-        </div>
-        <div class="skill" data-text="Experience 2 years">
-          <img
-            class="w-16"
-            src="../assets/images/docker.png"
-            alt="docker"
-          />
-        </div>
+        <p class="mb-3 opacity-80 text-justify">
+          Si mon profil ainsi que mes travaux inspirent votre projet, vous pouvez me contacter <a class="nav-link" href="#contact">ici</a>.
+        </p>-->
+        <p class="mb-3 mt-10 md:mt-5 opacity-80 text-justify">
+          I am web developer since 3 years and I am specialized in creation and maintenance of web apps
+          mostly about the <span class="font-semibold dark:font-bold">Back-End</span> part.
+        </p>
+        <p class="mb-3 opacity-80 text-justify">
+          I am passionate about the environment revolving around web development,
+          I also work on the <span class="font-semibold dark:font-bold">Front-End</span> part, as well as <span class="font-semibold dark:font-bold">DevOps</span> part.
+        </p>
+        <p class="mb-3 opacity-80 text-justify">
+          If my profile and my works inspire your project, you can contact me <a class="about-link" href="#contact">here</a>.
+        </p>
       </div>
     </div>
   </section>
