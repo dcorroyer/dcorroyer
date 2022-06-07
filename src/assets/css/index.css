@@ -135,6 +135,7 @@
 
     .contact-link {
         @apply
-            p-4 rounded-full hover:brightness-110
+            p-3 rounded-full hover:brightness-110
+            dark:bg-white
     }
 }

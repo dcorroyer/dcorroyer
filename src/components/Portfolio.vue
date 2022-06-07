@@ -13,7 +13,7 @@
         description="A portfolio made for a 3D freelance artist who wanted to present his work."
         githubLink="https://github.com/dcorroyer/acidarts"
         webLink="https://acidarts.fr"
-        imageUrl="./src/assets/images/acidarts.jpg"
+        imageUrl="/assets/images/acidarts.jpg"
       />
     </ul>
   </section>

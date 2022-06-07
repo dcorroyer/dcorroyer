@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <a :href="socialLink" class="contact-link">
+  <a :href="socialLink" target="_blank" class="contact-link">
     <img
       class="w-16 md:w-12"
       :src="imageUrl"
