@@ -4,7 +4,7 @@
       <div class="rounded-full w-48 md:w-64 h-48 md:h-64 overflow-hidden bg-primary">
         <img
           class="w-full h-full object-cover opacity-90"
-          src="../assets/images/people.jpg"
+          src="../assets/images/avatar.png"
           alt="profile"
         />
       </div>
