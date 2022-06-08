@@ -17,7 +17,7 @@
     <div class="container-hero-image">
       <img
         class="w-full h-full object-cover opacity-90 object-center"
-        src="../assets/images/people.jpg"
+        src="/images/people.jpg"
         alt="profile"
       />
     </div>

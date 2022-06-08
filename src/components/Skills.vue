@@ -8,56 +8,56 @@
         <div class="skill" data-text="Experience 3 years">
           <img
             class="w-16"
-            src="../assets/images/php.png"
+            src="/images/php.png"
             alt="php"
           />
         </div>
         <div class="skill" data-text="Experience 3 years">
           <img
             class="w-16"
-            src="../assets/images/symfony.png"
+            src="/images/symfony.png"
             alt="symfony"
           />
         </div>
         <div class="skill" data-text="Experience 2 years">
           <img
             class="w-16"
-            src="../assets/images/javascript.png"
+            src="/images/javascript.png"
             alt="javascript"
           />
         </div>
         <div class="skill" data-text="Some knowledge">
           <img
             class="w-16"
-            src="../assets/images/reactjs.png"
+            src="/images/reactjs.png"
             alt="react"
           />
         </div>
         <div class="skill" data-text="Learning in progress">
           <img
             class="w-16"
-            src="../assets/images/vuejs.png"
+            src="/images/vuejs.png"
             alt="vue"
           />
         </div>
         <div class="skill" data-text="Learning in progress">
           <img
             class="w-16"
-            src="../assets/images/nuxt.png"
+            src="/images/nuxt.png"
             alt="nuxt"
           />
         </div>
         <div class="skill" data-text="Learning in progress">
           <img
             class="w-16"
-            src="../assets/images/tailwindcss.png"
+            src="/images/tailwindcss.png"
             alt="tailwindcss"
           />
         </div>
         <div class="skill" data-text="Experience 2 years">
           <img
             class="w-16"
-            src="../assets/images/docker.png"
+            src="/images/docker.png"
             alt="docker"
           />
         </div>

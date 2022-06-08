@@ -30,7 +30,7 @@
         <a :href="githubLink" target="_blank" class="portfolio-link bg-primary">
           <img
           class="w-5 h-5"
-          src="../assets/images/github-white.svg"
+          src="/images/github-white.svg"
           alt="github"
           />
           Github
@@ -38,7 +38,7 @@
         <a :href="webLink" target="_blank" class="portfolio-link bg-primary-gray dark:bg-primary-black">
           <img
           class="w-5 h-5"
-          src="../assets/images/web.svg"
+          src="/images/web.svg"
           alt="website"
           />
           Website

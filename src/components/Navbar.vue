@@ -18,7 +18,7 @@
         <button id="toggle-theme" class="relative z-30 dark:invert">
           <img
             class="w-7 md:-mt-1"
-            src="../assets/images/icon-dark.svg" 
+            src="/images/icon-dark.svg" 
             alt="theme"
           />
         </button>
@@ -26,7 +26,7 @@
         <!-- Mobile menu button -->
         <button id="toggle-menu" class="relative z-30 p-2 md:hidden dark:invert">
           <img
-            src="../assets/images/icon-menu.svg"
+            src="/images/icon-menu.svg"
             alt="menu"
           />
         </button>

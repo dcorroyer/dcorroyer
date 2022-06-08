@@ -27,7 +27,7 @@ navLinks.forEach(navLink => {
 function changeMenuIcon() {
   const isContainTranslate = menu.classList.contains('translate-y-[-200%]')
   const icon = isContainTranslate ? 'icon-menu' : 'icon-close'
-  toggleMenuIcon.src = `../assets/images/${icon}.svg`
+  toggleMenuIcon.src = `/images/${icon}.svg`
 }
 
 // Toggle Theme
@@ -39,5 +39,5 @@ toggleTheme.addEventListener('click', () => {
   html.classList.toggle('dark')
   const isDark = html.classList.contains('dark')
   const themeIcon = isDark ? 'light' : 'dark'
-  toggleThemeIcon.src = `../assets/images/icon-${themeIcon}.svg`
+  toggleThemeIcon.src = `/images/icon-${themeIcon}.svg`
 })

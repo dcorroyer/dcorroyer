@@ -18,19 +18,19 @@
 
         <FooterSocialCard 
           socialLink="https://github.com/dcorroyer"
-          imageUrl="/assets/images/github-black.svg"
+          imageUrl="/images/github-black.svg"
           imageName="github"
         />
 
         <FooterSocialCard 
           socialLink="https://linkedin.com/in/dcorroyer"
-          imageUrl="/assets/images/linkedin.svg"
+          imageUrl="/images/linkedin.svg"
           imageName="linkedin"
         />
 
         <FooterSocialCard 
           socialLink="https://discord.gg/V5HjYg2dT4"
-          imageUrl="/assets/images/discord.svg"
+          imageUrl="/images/discord.svg"
           imageName="discord"
         />
 
