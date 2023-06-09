@@ -1,5 +1,5 @@
 <script setup>
-  import PortfolioCard from './PortfolioCard.vue';
+import PortfolioCard from './PortfolioCard.vue';
 </script>
 
 <template>
@@ -8,13 +8,15 @@
       Here <span class="text-black dark:text-white font-normal opacity-70">is my work</span>
     </h2>
     <ul class="w-full md:w-5/6 space-y-10 py-5 m-auto">
-      <PortfolioCard 
-        title="Acidarts - Portfolio"
+      <PortfolioCard title="Acidarts - Portfolio"
         description="A portfolio made for a 3D freelance artist who wanted to present his work."
-        githubLink="https://github.com/dcorroyer/acidarts"
-        webLink="https://acidarts.fr"
-        imageUrl="/acidarts.jpg"
-      />
+        githubLink="https://github.com/dcorroyer/acidarts" webLink="https://acidarts.fr" imageUrl="/acidarts.jpg" />
+    </ul>
+
+    <ul class="w-full md:w-5/6 space-y-10 py-5 m-auto">
+      <PortfolioCard title="Bnazon - Portfolio"
+        description="A portfolio made for a 3D concept artist who wanted to present his work."
+        githubLink="https://github.com/dcorroyer/bnazon" webLink="https://bnazon.netlify.app" imageUrl="/bnazon.jpg" />
     </ul>
   </section>
 </template>
