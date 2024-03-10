@@ -6,7 +6,7 @@
 
 - ⚡ I am a web developer specialized in Symfony & Laravel
 - 🌱 I am currently learning React.JS
-- 🥅 2023 Goals: Making a complete PHP8 & React.JS app
+- 🥅 2024 Goals: Making a complete SF6 & React.JS app
 
 ### 🌐 Connect with me:
 
