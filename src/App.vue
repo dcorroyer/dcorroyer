@@ -1,11 +1,11 @@
 <script setup>
-  import About from './components/About.vue';
-  import Border from './components/Border.vue';
-  import Footer from './components/Footer.vue'
-  import Home from './components/Home.vue';
-  import Navbar from './components/Navbar.vue';
-  import Portfolio from './components/Portfolio.vue';
-  import Skills from './components/Skills.vue';
+import About from './components/AboutComponent.vue'
+import Border from './components/BorderComponent.vue'
+import Footer from './components/FooterComponent.vue'
+import Home from './components/HomeComponent.vue'
+import Navbar from './components/NavbarComponent.vue'
+import Portfolio from './components/PortfolioComponent.vue'
+import Skills from './components/SkillsComponent.vue'
 </script>
 
 <template>
