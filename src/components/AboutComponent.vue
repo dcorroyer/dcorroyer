@@ -16,7 +16,7 @@
           </span>
         </h2>
         <p class="mb-3 mt-10 md:mt-5 opacity-80 text-justify">
-          I have been a web developer for 4 years and I specialize in web apps creation and
+          I have been a web developer for 5 years and I specialize in web apps creation and
           maintenance mostly on
           <span class="font-semibold dark:font-bold">Symfony & ReactJS</span>.
         </p>
