@@ -5,8 +5,8 @@
 ## I'm a Developer and a Learning lover
 
 - ⚡ I am a web developer specialized in Symfony & React
-- 🌱 I am currently learning React & Next.js
-- 🥅 2024 Goals: Making a complete SF & React app
+- 🌱 2024 Goals: ~~Making a complete SF & React app~~ ✅
+- 🥅 2025 Goals: Making a new complete app with a design system based on shadcn/ui
 
 ### 🌐 Connect with me:
 
@@ -28,7 +28,6 @@
 #### Frontend languages:
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 #### Backend languages:
