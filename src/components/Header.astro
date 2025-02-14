@@ -1,0 +1,82 @@
+---
+---
+
+<header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-md">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="h-12">
+        <img src="/images/logo.png" alt="Dylan Corroyer" class="h-full w-auto" />
+      </a>
+      
+      <div class="flex items-center gap-2 lg:hidden">
+        <button id="theme-toggle" class="p-2 text-primary dark:text-white lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </button>
+        <button id="menu-toggle" class="lg:hidden p-2 text-primary dark:text-white" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="menu" class="invisible lg:visible opacity-0 lg:opacity-100 -translate-y-2 lg:translate-y-0 lg:flex lg:items-center lg:gap-6 absolute lg:relative top-full left-0 right-0 bg-white/95 dark:bg-gray-900/95 lg:bg-transparent lg:dark:bg-transparent p-4 lg:p-0 shadow-md lg:shadow-none transition-all duration-200 ease-in-out">
+        <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 w-full lg:w-auto">
+          <a href="#home" class="block lg:inline-block py-3 lg:py-2 text-primary dark:text-white hover:font-semibold transition-all text-center w-full lg:w-auto hover:bg-gray-50 dark:hover:bg-gray-800/50 lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:hover:font-semibold">Home</a>
+          <a href="#about" class="block lg:inline-block py-3 lg:py-2 text-primary dark:text-white hover:font-semibold transition-all text-center w-full lg:w-auto hover:bg-gray-50 dark:hover:bg-gray-800/50 lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:hover:font-semibold">About</a>
+          <a href="#portfolio" class="block lg:inline-block py-3 lg:py-2 text-primary dark:text-white hover:font-semibold transition-all text-center w-full lg:w-auto hover:bg-gray-50 dark:hover:bg-gray-800/50 lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:hover:font-semibold">Portfolio</a>
+          <a href="#contact" class="block lg:inline-block py-3 lg:py-2 text-primary dark:text-white hover:font-semibold transition-all text-center w-full lg:w-auto hover:bg-gray-50 dark:hover:bg-gray-800/50 lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:hover:font-semibold">Contact</a>
+        </div>
+        <button id="theme-toggle-desktop" class="hidden lg:block p-2 text-primary dark:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  
+  const toggleTheme = () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  };
+
+  themeToggle?.addEventListener('click', toggleTheme);
+  themeToggleDesktop?.addEventListener('click', toggleTheme);
+
+  menuToggle?.addEventListener('click', () => {
+    menu?.classList.toggle('invisible');
+    menu?.classList.toggle('opacity-0');
+    menu?.classList.toggle('-translate-y-2');
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        menu.classList.add('invisible', 'opacity-0', '-translate-y-2');
+      }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {
+      menu?.classList.remove('invisible', 'opacity-0', '-translate-y-2');
+    } else {
+      menu?.classList.add('invisible', 'opacity-0', '-translate-y-2');
+    }
+  });
+</script>

@@ -1,0 +1,63 @@
+---
+const projects = [
+  {
+    title: 'Mybudget',
+    description: 'A budget management application developed with Symfony 6 and React 18 (TypeScript)',
+    image: '/images/projects/mybudget.jpg',
+    github: 'https://github.com/dcorroyer/mybudget',
+    website: 'https://mybudget.dcorroyer.fr'
+  },
+  {
+    title: 'Acidarts - Portfolio',
+    description: 'A portfolio made for a 3D freelance artist who wanted to present his work',
+    image: '/images/projects/acidarts.jpg',
+    github: 'https://github.com/dcorroyer/acidarts',
+    website: 'https://acidarts.fr'
+  },
+  {
+    title: 'Bnazon - Portfolio',
+    description: 'A portfolio made for a 3D concept artist who wanted to present his work',
+    image: '/images/projects/bnazon.jpg',
+    github: 'https://github.com/dcorroyer/bnazon',
+    website: 'https://bnazon.netlify.app'
+  }
+];
+---
+
+<section id="portfolio" class="py-12">
+  <div class="mb-12">
+    <h2 class="text-4xl font-bold mb-4">
+      <span class="text-primary">Here</span>
+      <span class="text-gray-900 dark:text-white font-normal opacity-70"> is my work</span>
+    </h2>
+  </div>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    {projects.map((project) => (
+      <div class="bg-white dark:bg-gray-800/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+        <img src={project.image} alt={project.title} class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+          <div class="flex gap-3">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm inline-flex items-center justify-center px-3 py-1.5 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
+            >
+              Github
+            </a>
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm inline-flex items-center justify-center px-3 py-1.5 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            >
+              Website
+            </a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

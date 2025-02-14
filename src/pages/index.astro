@@ -1,0 +1,102 @@
+---
+import About from '../components/About.astro';
+import Border from '../components/Border.astro';
+import Contact from '../components/Contact.astro';
+import Header from '../components/Header.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Skills from '../components/Skills.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Dylan Corroyer - Portfolio">
+  <Header />
+  <main class="container mx-auto px-6 mb-20">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
+          Hello,<br />
+          I am <span class="text-primary">Dylan Corroyer</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+          <span class="typing-text"></span>
+        </p>
+        <a 
+          href="#portfolio" 
+          class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+        >
+          See my work
+        </a>
+      </div>
+    </section>
+
+    <Border />
+    <About />
+    <Border />
+    <Skills />
+    <Border />
+    <Portfolio />
+  </main>
+  <Contact />
+</Layout>
+
+<style>
+  .typing-text {
+    display: inline-block;
+    position: relative;
+    min-width: 200px;
+  }
+
+  .typing-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+  }
+
+  .typing-text.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+  }
+
+  .typing-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+  }
+</style>
+
+<script>
+  const titles = ['Web Developer', 'Full-Stack Developer', 'Learning Lover'];
+  let currentIndex = 0;
+  const typingText = document.querySelector('.typing-text') as HTMLElement;
+
+  function updateText() {
+    if (!typingText) return;
+    
+    typingText.classList.add('fade-out');
+    
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % titles.length;
+      typingText.textContent = titles[currentIndex];
+      typingText.classList.remove('fade-out');
+      typingText.classList.add('fade-in');
+    }, 500);
+
+    setTimeout(() => {
+      typingText.classList.remove('fade-in');
+    }, 800);
+  }
+
+  if (typingText) {
+    typingText.textContent = titles[0];
+    setTimeout(updateText, 500);
+    setInterval(updateText, 3000);
+  }
+</script>
