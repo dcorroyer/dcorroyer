@@ -6,7 +6,7 @@
 
 - ⚡ I am a web developer specialized in Symfony & TypeScript
 - 🌱 2024 Goals: ~~Making a complete SF & React app~~ ✅
-- 🥅 2025 Goals: Learning Nuxt 3
+- 🥅 2025 Goals: Improve my actual stack with new projects
 
 ### 🌐 Connect with me:
 
@@ -26,7 +26,6 @@
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
 ![Astro](https://img.shields.io/badge/Astro-FF2B2B?style=for-the-badge&logo=astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
