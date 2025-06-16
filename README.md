@@ -6,7 +6,7 @@
 
 - ⚡ I am a web developer specialized in Symfony & TypeScript
 - 🌱 2024 Goals: ~~Making a complete SF & React app~~ ✅
-- 🥅 2025 Goals: Improve my actual stack with new projects
+- 🥅 2025 Goals: Build a new complete web app with PHP and React
 
 ### 🌐 Connect with me:
 
@@ -21,11 +21,13 @@
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white)
 ![API Platform](https://img.shields.io/badge/API%20Platform-38BDF8?style=for-the-badge&logo=api-platform&logoColor=white)
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 
 #### Frontend:
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![Astro](https://img.shields.io/badge/Astro-FF2B2B?style=for-the-badge&logo=astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
