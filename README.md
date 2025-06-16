@@ -4,7 +4,7 @@
 
 ## I'm a Developer and a Learning lover
 
-- ⚡ I am a web developer specialized in Symfony & TypeScript
+- ⚡ I am a web developer specialized in PHP & TypeScript
 - 🌱 2024 Goals: ~~Making a complete SF & React app~~ ✅
 - 🥅 2025 Goals: Build a new complete web app with PHP and React
 
