@@ -6,7 +6,7 @@
 
 - ⚡ I am a web developer specialized in PHP & TypeScript
 - 🌱 2024 Goals: ~~Making a complete SF & React app~~ ✅
-- 🥅 2025 Goals: Build a new complete web app with PHP and React
+- 🥅 2025 Goals: MyBudget with fresh UI and new features & publish a client project (Astro.js + admin with Laravel/Inertia/React)
 
 ### 🌐 Connect with me:
 
