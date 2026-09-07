@@ -5,11 +5,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#6366F1',
-        secondary: '#4B5563',
+        bg: 'rgb(var(--bg) / <alpha-value>)',
+        surface: 'rgb(var(--surface) / <alpha-value>)',
+        fg: 'rgb(var(--fg) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        line: 'rgb(var(--line) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
       },
     },
   },

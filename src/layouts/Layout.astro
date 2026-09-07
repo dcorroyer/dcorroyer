@@ -8,16 +8,17 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#020617" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
@@ -26,35 +27,203 @@ const { title, description } = Astro.props;
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://dcorroyer.fr" />
     <title>{title}</title>
-  </head>
-  <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
-    <slot />
-    <script>
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme') || 'light';
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    <script is:inline>
+      // Appliqué avant le premier rendu pour éviter tout flash de thème.
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const dark = stored ? stored === 'dark' : true;
+        document.documentElement.classList.toggle('dark', dark);
       })();
+    </script>
+  </head>
 
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="grid-dots"></div>
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+    </div>
 
-      window.localStorage.setItem('theme', theme);
+    <slot />
 
+    <script is:inline>
       document.getElementById('theme-toggle')?.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        window.localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        const dark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
       });
     </script>
   </body>
 </html>
 
-<style>
+<style is:global>
+  :root {
+    --bg: 250 250 250;
+    --surface: 255 255 255;
+    --fg: 15 23 42;
+    --muted: 100 116 139;
+    --line: 226 232 240;
+    --accent: 21 128 61;
+    --dot: 100 116 139;
+    --dot-alpha: 0.28;
+    --glow-a: 21 128 61;
+    --glow-b: 37 99 235;
+    --glow-alpha: 0.1;
+  }
+
+  :root.dark {
+    --bg: 2 6 23;
+    --surface: 15 23 42;
+    --fg: 248 250 252;
+    --muted: 148 163 184;
+    --line: 30 41 59;
+    --accent: 34 197 94;
+    --dot: 148 163 184;
+    --dot-alpha: 0.18;
+    --glow-a: 34 197 94;
+    --glow-b: 56 130 246;
+    --glow-alpha: 0.16;
+  }
+
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background-color: rgb(var(--bg));
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    color: rgb(var(--fg));
+    background-color: rgb(var(--bg));
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+  }
+
+  /* ── Atmosphère : grille de points + halos ─────────────────────────── */
+
+  .atmosphere {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .grid-dots {
+    position: absolute;
+    inset: -2px;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgb(var(--dot) / var(--dot-alpha)) 1px,
+      transparent 0
+    );
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 20%, transparent 100%);
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: var(--glow-alpha);
+    will-change: transform;
+  }
+
+  .glow-a {
+    width: 42rem;
+    height: 42rem;
+    top: -14rem;
+    left: -10rem;
+    background: rgb(var(--glow-a));
+    animation: drift-a 22s ease-in-out infinite alternate;
+  }
+
+  /* Statique : une seule animation d'ambiance en continu (cf. règle
+     « animer 1-2 éléments par vue au maximum »). */
+  .glow-b {
+    width: 34rem;
+    height: 34rem;
+    bottom: -12rem;
+    right: -8rem;
+    background: rgb(var(--glow-b));
+  }
+
+  @keyframes drift-a {
+    to {
+      transform: translate3d(6rem, 4rem, 0) scale(1.15);
+    }
+  }
+
+  /* ── Entrée en cascade ─────────────────────────────────────────────── */
+
+  .rise {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes rise {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* ── Pastille de statut ────────────────────────────────────────────── */
+
+  .status-dot {
+    position: relative;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: rgb(var(--accent));
+  }
+
+  .status-dot::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 9999px;
+    border: 1px solid rgb(var(--accent) / 0.5);
+    animation: ping 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes ping {
+    0% {
+      transform: scale(0.6);
+      opacity: 0.9;
+    }
+    70%,
+    100% {
+      transform: scale(1.9);
+      opacity: 0;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glow,
+    .status-dot::after {
+      animation: none;
+    }
+
+    .rise {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    * {
+      transition-duration: 0.01ms !important;
+    }
   }
 </style>
