@@ -1,102 +1,123 @@
 ---
-import About from '../components/About.astro';
-import Border from '../components/Border.astro';
-import Contact from '../components/Contact.astro';
-import Header from '../components/Header.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Skills from '../components/Skills.astro';
 import Layout from '../layouts/Layout.astro';
+
+const title = 'Dylan Corroyer';
+const description =
+  'Web developer, six years in PHP and TypeScript. Agentic development, DDD, TDD, self-hosted infrastructure.';
+
+const stack = [
+  { label: 'Backend', items: ['PHP', 'Symfony', 'Laravel', 'API Platform'] },
+  { label: 'Frontend', items: ['TypeScript', 'React', 'Next.js', 'Astro'] },
+  { label: 'Practices', items: ['Agentic development', 'DDD', 'TDD'] },
+  { label: 'Infrastructure', items: ['Docker', 'Self-hosted', 'Cloudflare Tunnel'] },
+];
+
+// Ajoute ici tes autres liens (LinkedIn, e-mail…) : ils s'affichent automatiquement.
+const links = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/dcorroyer',
+    path: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z',
+  },
+];
 ---
 
-<Layout title="Dylan Corroyer - Portfolio">
-  <Header />
-  <main class="container mx-auto px-6 mb-20">
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center">
-      <div class="max-w-2xl text-center">
-        <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-white">
-          Hello,<br />
-          I am <span class="text-primary">Dylan Corroyer</span>
-        </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
-          <span class="typing-text"></span>
+<Layout title={title} description={description}>
+  <button
+    id="theme-toggle"
+    aria-label="Toggle theme"
+    class="fixed top-5 right-5 z-50 rounded-full p-2 text-secondary transition-colors hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 dark:hidden"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+      ></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="hidden h-5 w-5 dark:block"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+      ></path>
+    </svg>
+  </button>
+
+  <main class="flex min-h-screen items-center justify-center px-6 py-16">
+    <div class="w-full max-w-xl">
+      <img
+        src="/images/avatar.png"
+        alt=""
+        width="80"
+        height="80"
+        class="mb-8 h-20 w-20 rounded-full object-cover ring-1 ring-gray-200 dark:ring-gray-700"
+      />
+
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+        Dylan Corroyer
+      </h1>
+      <p class="mt-2 text-lg text-primary">Web developer</p>
+
+      <div class="mt-8 space-y-4 text-gray-600 dark:text-gray-300">
+        <p>
+          Six years building and maintaining web applications in <strong
+            class="font-medium text-gray-900 dark:text-white">PHP</strong
+          > and <strong class="font-medium text-gray-900 dark:text-white">TypeScript</strong>.
         </p>
-        <a 
-          href="#portfolio" 
-          class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-        >
-          See my work
-        </a>
+        <p>
+          I work agent-first: most of my day-to-day development is driven by coding agents, on
+          codebases I design around domain-driven design and grow test-first. I run my own
+          infrastructure — self-hosted deployments behind a zero-trust edge.
+        </p>
       </div>
-    </section>
 
-    <Border />
-    <About />
-    <Border />
-    <Skills />
-    <Border />
-    <Portfolio />
+      <dl class="mt-10 space-y-4">
+        {
+          stack.map((group) => (
+            <div class="sm:flex sm:items-baseline sm:gap-4">
+              <dt class="w-32 shrink-0 text-sm font-medium text-gray-400 dark:text-gray-500">
+                {group.label}
+              </dt>
+              <dd class="mt-1 text-gray-700 sm:mt-0 dark:text-gray-300">
+                {group.items.join(' · ')}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <div class="mt-10 flex items-center gap-5 border-t border-gray-100 pt-8 dark:border-gray-800">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.name}
+              class="text-gray-400 transition-colors hover:text-primary dark:text-gray-500 dark:hover:text-primary"
+            >
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d={link.path} />
+              </svg>
+            </a>
+          ))
+        }
+      </div>
+    </div>
   </main>
-  <Contact />
 </Layout>
-
-<style>
-  .typing-text {
-    display: inline-block;
-    position: relative;
-    min-width: 200px;
-  }
-
-  .typing-text::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.5s ease;
-  }
-
-  .typing-text.fade-out {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.5s ease;
-  }
-
-  .typing-text.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.5s ease;
-  }
-</style>
-
-<script>
-  const titles = ['Web Developer', 'Full-Stack Developer', 'Learning Lover'];
-  let currentIndex = 0;
-  const typingText = document.querySelector('.typing-text') as HTMLElement;
-
-  function updateText() {
-    if (!typingText) return;
-    
-    typingText.classList.add('fade-out');
-    
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % titles.length;
-      typingText.textContent = titles[currentIndex];
-      typingText.classList.remove('fade-out');
-      typingText.classList.add('fade-in');
-    }, 500);
-
-    setTimeout(() => {
-      typingText.classList.remove('fade-in');
-    }, 800);
-  }
-
-  if (typingText) {
-    typingText.textContent = titles[0];
-    setTimeout(updateText, 500);
-    setInterval(updateText, 3000);
-  }
-</script>
